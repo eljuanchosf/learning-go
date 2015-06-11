@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"net/http"
 )
 
 type Page struct {
@@ -28,10 +29,18 @@ func loadPage(title string) (*Page, error) {
     return &Page{Title: title, Body: body}, nil
 }
 
-// This is the main entry point to the program. Shoud print "This is a sample Page."
+// This method will get an HTTP request, parse it, extract the title and load the corresponding file.
+// Then it will format the response with some HTML and send it to the ResponseWriter w.
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+    title := r.URL.Path[len("/view/"):]
+    p, _ := loadPage(title)
+    fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
+}
+
+// This is the main entry point to the program.
 func main() {
-    p1 := &Page{Title: "TestPage", Body: []byte("This is a sample Page.")}
-    p1.save()
-    p2, _ := loadPage("TestPage")
-    fmt.Println(string(p2.Body))
+    // This will register the Handler for the viewHandler
+    http.HandleFunc("/view/", viewHandler)
+    // This will start the server in the 8080 port
+    http.ListenAndServe(":8080", nil)
 }
