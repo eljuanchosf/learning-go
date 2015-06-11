@@ -1,0 +1,406 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"A",
+				"ANDROID_HOME"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 217.0,
+		"last_filter": "status",
+		"selected_items":
+		[
+			[
+				"status",
+				"git: status"
+			],
+			[
+				"git status",
+				"git: status"
+			],
+			[
+				"git",
+				"git: init"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"commit",
+				"git: quick stage current file and commit"
+			],
+			[
+				"push",
+				"git: push"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"preview",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"marke",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"gutter",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/juan/dev/go/learning-go"
+	],
+	"file_history":
+	[
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/README.md.new",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/Gemfile",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/README.md",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/manifest.yml",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/.cfignore",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/Procfile",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/lib/server.rb",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/config.ru",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/lib/controller.rb",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/server.rb",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/.cfignore",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/.ruby-gemset",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/.ruby-version",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/manifest.yml",
+		"/home/juan/dev/centurylink/af-ruby-sinatra-jumpstart/.gitignore",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/README.md",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/.gitignore",
+		"/home/juan/Documents/notes on EMC call.txt",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/src/main/webapp/index.html",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/src/main/java/sample/sb/Application.java",
+		"/home/juan/dev/centurylink/af-spring-boot-jumpstart/src/test/java/sample/sb/ApplicationTests.java",
+		"/home/juan/dev/centurylink/spring-boot/README.md",
+		"/home/juan/dev/centurylink/spring-boot/LICENSE.txt",
+		"/home/juan/dev/centurylink/spring-boot/.gitignore",
+		"/home/juan/dev/centurylink/spring-boot/manifest.yml",
+		"/home/juan/dev/centurylink/spring-boot/src/main/java/sample/sb/Application.java",
+		"/home/juan/dev/centurylink/spring-boot/build.gradle",
+		"/home/juan/dev/centurylink/spring-boot/src/test/java/sample/ui/ApplicationTests.java",
+		"/home/juan/dev/centurylink/spring-boot/src/main/java/sample/ui/Application.java",
+		"/home/juan/dev/centurylink/spring-boot/src/main/java/hello/Application.java",
+		"/home/juan/dev/centurylink/spring-boot/src/test/java/sample/sb/ApplicationTests.java",
+		"/home/juan/dev/centurylink/spring-boot/src/main/java/hello/HelloController.java",
+		"/home/juan/dev/centurylink/spring-boot/build/libs/spring-boot-sample-web-static-0.0.0.war",
+		"/home/juan/dev/cf/buildpacks/java-buildpack/config/new_relic_agent.yml",
+		"/home/juan/dev/cf/buildpacks/java-buildpack/lib/java_buildpack/framework/app_dynamics_agent.rb",
+		"/home/juan/dev/cf/buildpacks/java-buildpack/config/app_dynamics_agent.yml",
+		"/home/juan/dev/cf/buildpacks/java-buildpack/lib/java_buildpack/framework/java_opts.rb",
+		"/home/juan/dev/cf/buildpacks/java-buildpack/.gitignore",
+		"/home/juan/Dropbox/Altoros/emc_presales.txt",
+		"/home/juan/.bash_profile",
+		"/var/www/html/test-slim.php",
+		"/home/juan/dev/lattice/lattice/Vagrantfile",
+		"/home/juan/.ssh/workstation-alan-3.pem",
+		"/home/juan/.ssh/workstation-alan-2.pem",
+		"/home/juan/.ssh/workstation-alan.pem",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/cities/cities-service/manifest.yml",
+		"/home/juan/dev/cftraining/java-buildpack/config/components.yml",
+		"/home/juan/dev/cftraining/java-buildpack/push-buildpack.sh",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/quiz/developer-quiz.txt",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/README.md",
+		"/home/juan/dev/cftraining/java-buildpack/config/open_jdk_jre.yml",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/push-buildpack.sh",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/service-broker/haash-client/manifest.yml",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/service-broker/haash-broker/build/resources/main/application.properties",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/service-broker/haash-broker/src/main/resources/import.sql",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/service-broker/haash-broker/src/main/java/io/pivotal/pcf/haash/model/DashboardClient.java",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/service-broker/haash-broker/manifest.yml",
+		"/home/juan/dev/cftraining/java-buildpack/lib/java_buildpack/staging_timestamp.rb",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/operations/jp-space-security-group.json",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/cities/cities-ui/manifest.yml",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/.gitignore",
+		"/home/juan/dev/cftraining/notes.txt",
+		"/home/juan/dev/cftraining/cftraining.sublime-project",
+		"/home/juan/.bash_rc",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/operations/jenkins.yml",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/operations/cc_monit_summary.txt",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/operations/running-security-group.json",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/quiz/operator-quiz.txt",
+		"/home/juan/dev/cftraining/pcf-immersion/environments/edu-vsphere.adoc",
+		"/home/juan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/cities/build.gradle",
+		"/home/juan/dev/cftraining/pcf-immersion-workspace/cities/settings.gradle",
+		"/home/juan/dev/go/main.go",
+		"/home/juan/.config/sublime-text-3/Packages/User/GoSublime.sublime-settings",
+		"/home/juan/.config/sublime-text-3/Packages/GoSublime/CHANGELOG.md",
+		"/home/juan/dev/lattice/lattice/vim",
+		"/home/juan/.gvm/scripts/gvm",
+		"/etc/modprobe.d/ath9k.conf",
+		"/home/juan/.bashrc"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sinatra-test",
+			"ALTR",
+			"juan.pablo.genovese",
+			"/home/juan/dev/centurylink",
+			"/home/juan/dev/centurylink/",
+			"juan.pablo.genovese",
+			"org ALTR",
+			"errand"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"raging-badger",
+			"DEMO",
+			"Demouser",
+			"/Users/demo/projects/",
+			"Demouser",
+			"org DEMO"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///home/juan/dev/go":
+	{
+		"height": 112.0
+	},
+	"output.GitSavvy":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "learning-go.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"new_",
+				"config/new_relic_agent.yml"
+			],
+			[
+				"app_d",
+				"lib/java_buildpack/framework/app_dynamics_agent.rb"
+			],
+			[
+				"app_",
+				"config/app_dynamics_agent.yml"
+			],
+			[
+				"deve",
+				"pcf-immersion-workspace/quiz/developer-quiz.txt"
+			],
+			[
+				"open",
+				"java-buildpack/config/open_jdk_jre.yml"
+			],
+			[
+				"open_",
+				"java-buildpack/config/open_jdk_jre.yml"
+			],
+			[
+				"components",
+				"java-buildpack/config/components.yml"
+			],
+			[
+				"applica",
+				"pcf-immersion-workspace/service-broker/haash-broker/build/resources/main/application.properties"
+			],
+			[
+				"dashboar",
+				"pcf-immersion-workspace/service-broker/haash-broker/src/main/java/io/pivotal/pcf/haash/model/DashboardClient.java"
+			],
+			[
+				"dashb",
+				"pcf-immersion-workspace/service-broker/haash-broker/src/main/java/io/pivotal/pcf/haash/model/DashboardClient.java"
+			],
+			[
+				"import.sql",
+				"pcf-immersion-workspace/service-broker/haash-broker/src/main/resources/import.sql"
+			],
+			[
+				"import.",
+				"pcf-immersion-workspace/service-broker/haash-broker/src/main/resources/import.sql"
+			],
+			[
+				"manif",
+				"pcf-immersion-workspace/cities/cities-service/manifest.yml"
+			],
+			[
+				"mani",
+				"pcf-immersion-workspace/cities/cities-ui/manifest.yml"
+			],
+			[
+				"edu",
+				"pcf-immersion/environments/edu-vsphere.adoc"
+			],
+			[
+				"notes",
+				"notes.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 406.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
