@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"html/template"
 	"io/ioutil"
 	"net/http"
 )
@@ -29,18 +29,47 @@ func loadPage(title string) (*Page, error) {
     return &Page{Title: title, Body: body}, nil
 }
 
-// This method will get an HTTP request, parse it, extract the title and load the corresponding file.
-// Then it will format the response with some HTML and send it to the ResponseWriter w.
+func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
+    t, _ := template.ParseFiles(tmpl + ".html")
+    t.Execute(w, p)
+}
+
+// This handler will render the view.html template using the Page p.
 func viewHandler(w http.ResponseWriter, r *http.Request) {
     title := r.URL.Path[len("/view/"):]
-    p, _ := loadPage(title)
-    fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
+    p, err := loadPage(title)
+    if err != nil {
+        http.Redirect(w, r, "/edit/"+title, http.StatusFound)
+        return
+    }
+    renderTemplate(w, "view", p)
+}
+
+// The editHandler allows to render the edit.html template using the Page p.
+func editHandler(w http.ResponseWriter, r *http.Request) {
+    title := r.URL.Path[len("/edit/"):]
+    p, err := loadPage(title)
+    if err != nil {
+        p = &Page{Title: title}
+    }
+    renderTemplate(w, "edit", p)
+}
+
+// This method will save the data inserted in the rendered template, then redirec to the view.
+func saveHandler(w http.ResponseWriter, r *http.Request) {
+    title := r.URL.Path[len("/save/"):]
+    body := r.FormValue("body")
+    p := &Page{Title: title, Body: []byte(body)}
+    p.save()
+    http.Redirect(w, r, "/view/"+title, http.StatusFound)
 }
 
 // This is the main entry point to the program.
 func main() {
-    // This will register the Handler for the viewHandler
+    // This will register the Handlers
     http.HandleFunc("/view/", viewHandler)
+    http.HandleFunc("/edit/", editHandler)
+    http.HandleFunc("/save/", saveHandler)
     // This will start the server in the 8080 port
     http.ListenAndServe(":8080", nil)
 }
