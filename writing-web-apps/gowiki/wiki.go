@@ -4,10 +4,14 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"regexp"
 )
 
 // templates will hold the ParseFiles templates. But, if any of the templates doesn't exists, it will exit the program.
 var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
+
+// This regexp will verify that the url is correct
+var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 
 type Page struct {
     // Title is a regular string
@@ -20,6 +24,15 @@ type Page struct {
 func (p *Page) save() error {
     filename := p.Title + ".txt"
     return ioutil.WriteFile(filename, p.Body, 0600)
+}
+
+func getTitle(w http.ResponseWriter, r *http.Request) (string, error) {
+    m := validPath.FindStringSubmatch(r.URL.Path)
+    if m == nil {
+        http.NotFound(w, r)
+        return "", errors.New("Invalid Page Title")
+    }
+    return m[2], nil // The title is the second subexpression.
 }
 
 // This method will return a Page (defined above) by reading the data from a file in disk.
@@ -39,9 +52,11 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
     }
 }
 
-// This handler will render the view.html template using the Page p.
 func viewHandler(w http.ResponseWriter, r *http.Request) {
-    title := r.URL.Path[len("/view/"):]
+    title, err := getTitle(w, r)
+    if err != nil {
+        return
+    }
     p, err := loadPage(title)
     if err != nil {
         http.Redirect(w, r, "/edit/"+title, http.StatusFound)
@@ -52,7 +67,10 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 
 // The editHandler allows to render the edit.html template using the Page p.
 func editHandler(w http.ResponseWriter, r *http.Request) {
-    title := r.URL.Path[len("/edit/"):]
+    title, err := getTitle(w, r)
+    if err != nil {
+        return
+    }
     p, err := loadPage(title)
     if err != nil {
         p = &Page{Title: title}
@@ -62,10 +80,13 @@ func editHandler(w http.ResponseWriter, r *http.Request) {
 
 // This method will save the data inserted in the rendered template, then redirec to the view.
 func saveHandler(w http.ResponseWriter, r *http.Request) {
-    title := r.URL.Path[len("/save/"):]
+    title, err := getTitle(w, r)
+    if err != nil {
+        return
+    }
     body := r.FormValue("body")
     p := &Page{Title: title, Body: []byte(body)}
-    err := p.save()
+    err = p.save()
     if err != nil {
         http.Error(w, err.Error(), http.StatusInternalServerError)
         return
